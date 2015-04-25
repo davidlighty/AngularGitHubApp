@@ -11,8 +11,10 @@ var _ = require('lodash'),
  */
 module.exports = _.extend(
 	require('./env/all'),
-	require('./env/' + process.env.NODE_ENV) || {}
+	require('./env/' + process.env.NODE_ENV) || {},
+	require('./modules/core.module.js')
 );
+
 
 /**
  * Get files by glob patterns
@@ -64,6 +66,12 @@ module.exports.getJavaScriptAssets = function(includeTests) {
 		output = _.union(output, this.getGlobbedFiles(this.assets.tests));
 	}
 
+	return output;
+};
+
+module.exports.getJavaScriptModuleAssets = function(moduleName) {
+
+	var output = this.getGlobbedFiles(this[moduleName], 'public/');
 	return output;
 };
 

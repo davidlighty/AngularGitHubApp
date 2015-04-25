@@ -1,5 +1,10 @@
-{% extends 'layout.server.view.html' %}
-
+{% extends 'layout.server.view.html' %} 
 {% block content %}
-	<section data-ui-view></section>
+<section class="content">
+	<header data-ng-include="'/modules/core/core.header.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
+
+    <section class="container">
+        <section data-ng-include="'/modules/core/core.home.view.html'"></section>
+    </section>
+</section>
 {% endblock %}
