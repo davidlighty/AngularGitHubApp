@@ -1,9 +1,25 @@
-'use strict';
+/*global angular,GitHubService */
+
+(function() {
+    'use strict';
+
+    /**
+     *	@name HomeController
+     *	@desc Home Controller for gitReview site
+     */
+    function HomeController($scope, $log, GitHubService) {
+        var ctrl = this;
+        $log.debug('GitHubService',GitHubService);
+
+        // GitHubService.findRepo('test').then(function(resp){
+        //     $log.debug('Response', resp);
+        // });
 
 
-angular.module('core')
-    .controller('HomeController', ['$scope', '$http', '$q', homeController]);
+    }
 
-function homeController($scope, $http, $q) {
-    var ctrl = this;
-}
+    HomeController.$inject = ['$scope','$log', 'GitHubService'];
+    angular.module('core')
+        .controller('HomeController', HomeController);
+
+})();

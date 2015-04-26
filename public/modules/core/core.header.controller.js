@@ -1,12 +1,23 @@
-'use strict';
+/*global angular */
 
-angular.module('core').controller('HeaderController', ['$scope', 'Menus',
-	function($scope, Menus) {
-		$scope.isCollapsed = false;
-		$scope.menu = Menus.getMenu('topbar');
+(function() {
+    'use strict';
 
-		$scope.toggleCollapsibleMenu = function() {
-			$scope.isCollapsed = !$scope.isCollapsed;
-		};
-	}
-]);
+    /**
+     * @name HeaderController
+     * @desc Controller for the site fixed top header
+     */
+    function HeaderController($scope) {
+        $scope.isCollapsed = false;
+
+        $scope.toggleCollapsibleMenu = function() {
+            $scope.isCollapsed = !$scope.isCollapsed;
+        };
+    }
+
+    HeaderController.$inject = ['$scope'];
+
+    angular.module('core')
+        .controller('HeaderController', HeaderController);
+
+})();
