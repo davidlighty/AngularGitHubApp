@@ -38,6 +38,7 @@ module.exports = function(db) {
 	app.locals.jsFiles = config.getJavaScriptAssets();
 	app.locals.coreModuleFiles = config.getJavaScriptModuleAssets('core');
 	app.locals.cssFiles = config.getCSSAssets();
+	app.locals.importFiles = config.getImportAssets();
 
 	// Passing the request url to environment locals
 	app.use(function(req, res, next) {

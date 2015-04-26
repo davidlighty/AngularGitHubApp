@@ -1,18 +1,37 @@
-<section data-ng-controller="HomeController">
-	<div class="jumbotron text-center">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
-				<h1>Github Search Service</h1>
-			</div>
-		</div>
-	</div>
-	<div>
-		
-	</div>
-	<div class="row">
-		
-	</div>
-	<div class="well">
-		
-	</div>
+<section class="container" ng-controller="HomeController as vm">
+    <section>
+        <header>
+            <h1>GitHub Search</h1>
+            <div>
+                <paper-input-decorator label="GitHub Repo Search">
+                    <input is="core-input" ng-model="repoSearchTerm" ng-change="findRepos()">
+                </paper-input-decorator>
+            </div>
+            <div>
+            	<div>Searching:</div>
+            	<div>{{repoSearchTerm}}</div>
+            </div>
+            <div>
+                <header>
+                    <h1>Results</h1>
+                    <ul>
+                        <li ng-repeat="result in vm.Repos">
+                            {{result.name}}
+                        </li>
+                    </ul>
+                </header>
+            </div>
+        </header>
+    </section>
+    <section>
+        <header>
+            <h1>Todo</h1>
+            <ul>
+                <li>Implement Search bar for Github Repos</li>
+                <li>List GitHub Repo Results</li>
+                <li>Clicking GitHub Repo will open/show repo links/data</li>
+                <li>Develop header search</li>
+            </ul>
+        </header>
+    </section>
 </section>

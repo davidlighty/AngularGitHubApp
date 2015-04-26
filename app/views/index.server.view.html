@@ -1,10 +1,8 @@
-{% extends 'layout.server.view.html' %} 
-{% block content %}
-<section class="content">
-	<header data-ng-include="'/modules/core/core.header.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
-
-    <section class="container">
-        <section data-ng-include="'/modules/core/core.home.view.html'"></section>
-    </section>
-</section>
+{% extends 'layout.server.view.html' %} {% block header%}
+<core-toolbar id="mainheader">
+    <span flex>{{title}}</span>
+    <paper-icon-button id="searchbutton" icon="search"></paper-icon-button>
+</core-toolbar>
+{% endblock %} {% block content %}
+<div ng-include="'/modules/core/core.home.view.html'"></div>
 {% endblock %}

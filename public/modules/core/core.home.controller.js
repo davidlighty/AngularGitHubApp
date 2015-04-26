@@ -4,21 +4,28 @@
     'use strict';
 
     /**
-     *	@name HomeController
-     *	@desc Home Controller for gitReview site
+     *  @name HomeController
+     *  @desc Home Controller for gitReview site
      */
     function HomeController($scope, $log, GitHubService) {
-        var ctrl = this;
-        $log.debug('GitHubService',GitHubService);
+        var vm = this;
+        $log.debug('GitHubService', GitHubService);
 
-        // GitHubService.findRepo('test').then(function(resp){
-        //     $log.debug('Response', resp);
-        // });
+        function findRepos() {
+            $log.debug('Searching: ', $scope.repoSearchTerm);
+            if($scope.repoSearchTerm.length>3){
+                GitHubService.findRepo($scope.repoSearchTerm).then(function(resp) {
+                    $log.debug('Response', resp);
+                    vm.Repos = resp.data.items;
+                });    
+            }            
+        }
 
+        $scope.findRepos = findRepos;
 
     }
 
-    HomeController.$inject = ['$scope','$log', 'GitHubService'];
+    HomeController.$inject = ['$scope', '$log', 'GitHubService'];
     angular.module('core')
         .controller('HomeController', HomeController);
 

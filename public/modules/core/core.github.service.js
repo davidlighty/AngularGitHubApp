@@ -10,6 +10,7 @@
 
     Author: David Lighty
     Date:   4/25/2015
+    
 ****/
 (function() {
     'use strict';
