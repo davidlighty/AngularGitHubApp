@@ -38,6 +38,8 @@
     {% for cssFile in cssFiles %}
     <link rel="stylesheet" href="{{cssFile}}">{% endfor %}
 
+    <!-- Polymer WebComponents -->
+    <script type="text/javascript" src="/lib/webcomponentsjs/webcomponents.js"></script>
 
     {% for importFile in importFiles %}
     <link rel="import" href="{{importFile}}">{% endfor %}

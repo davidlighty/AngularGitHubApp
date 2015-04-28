@@ -21,39 +21,7 @@
                     </div>
                     <ul>
                         <li ng-repeat="result in vm.Repos">
-                            <section>
-                                <header>
-                                    <h1>
-                                    <a href="{{result.data.html_url}}">
-                                    {{result.data.full_name}}
-                                    </a>
-                                    </h1>
-                                    <p>{{result.data.description}}</p>
-                                </header>
-                                <div>
-                                    Last Updated:{{result.data.updated_at}}
-                                </div>
-                                <div>
-                                    Language:{{result.data.language}}
-                                </div>
-                                <div>
-                                    Owner?
-                                    <div>
-                                        <figure>
-                                            <img ng-src="{{result.data.owner.avatar_url}}" class="avatar" width="20" height="20" />
-                                        </figure>
-                                        {{result.data.owner.login}}
-                                    </div>
-
-
-                                </div>
-<!-- <div>
-    <small>{{result}}</small>
-</div>
- -->
-
-                            </section>
-
+                            <repo-card repo=result.data></repo-card>
                         </li>
                     </ul>
 

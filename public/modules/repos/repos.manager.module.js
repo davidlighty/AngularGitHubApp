@@ -49,6 +49,10 @@
             }
         }
 
+        /**
+            @name abort
+            @desc Clear out data array for a new search, cancel any current search.
+        */
         function abort() {
             mngr.Repos.length = 0;
             if (timeout) $timeout.cancel(timeout);

@@ -14,12 +14,11 @@ module.exports = {
         lib: {
             css: [],
             imports: [
-                // 'public/font-roboto/roboto.html',
-                // 'public/lib/core-elements/core-elements.html',
-                // 'public/lib/paper-elements/paper-elements.html'
+                'public/font-roboto/roboto.html',
+                'public/lib/core-elements/core-elements.html',
+                'public/lib/paper-elements/paper-elements.html'
             ],
             js: [
-                // 'public/lib/webcomponentsjs/webcomponents.js',
                 'public/lib/angular/angular.js'
             ]
         },
