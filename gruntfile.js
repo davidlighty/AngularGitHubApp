@@ -53,7 +53,8 @@ module.exports = function(grunt) {
 			all: {
 				src: watchFiles.clientJS.concat(watchFiles.serverJS),
 				options: {
-					jshintrc: true
+					jshintrc: true,
+					latedef:'nofunc'
 				}
 			}
 		},

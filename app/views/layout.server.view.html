@@ -65,7 +65,9 @@
     <script type="text/javascript" src="{{jsFile}}"></script>{% endfor %}
     <!-- Core Module Files -->
     {% for jsFile in coreModuleFiles %}
-    <script type="text/javascript" src="{{jsFile}}"></script>{% endfor %} {% if process.env.NODE_ENV === 'development' %}
+    <script type="text/javascript" src="{{jsFile}}"></script>{% endfor %} 
+
+    {% if process.env.NODE_ENV === 'development' %}
     <!--Livereload script rendered -->
     <script type="text/javascript" src="http://{{request.hostname}}:35729/livereload.js"></script>
     {% endif %}

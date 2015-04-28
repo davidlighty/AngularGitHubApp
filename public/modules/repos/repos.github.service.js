@@ -10,14 +10,17 @@
 
     Author: David Lighty
     Date:   4/25/2015
-    
+
 ****/
 (function() {
     'use strict';
 
-    function GitHubService($http, $log) {
+    var deps = ['$http', '$log','$q'];
+    function GitHubService($http, $log, $q) {
         $log.debug('Init GitHubService');
-        var service=this;
+        var service = this, canceller;
+
+
         service.gitHubAPI = {
             baseURL: 'https://api.github.com',
             searchEndPoint: function(type, term) {
@@ -33,6 +36,8 @@
             @desc Search GitHub for valid Repos by the search term.
         */
         service.findRepo = function(searchTerm) {
+            if(canceller) canceller.resolve();
+            canceller = $q.defer();
             return $http.get(service.gitHubAPI.searchEndPoint('repositories', searchTerm));
         };
 
@@ -46,7 +51,7 @@
 
     }
 
-    GitHubService.$inject = ['$http', '$log'];
-    angular.module('core')
+    GitHubService.$inject = deps;
+    angular.module('Repos')
         .service('GitHubService', GitHubService);
 })();

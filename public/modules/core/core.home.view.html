@@ -8,19 +8,56 @@
                 </paper-input-decorator>
             </div>
             <div>
-            	<div>Searching:</div>
-            	<div>{{repoSearchTerm}}</div>
-            </div>
-            <div>
-                <header>
-                    <h1>Results</h1>
+                <div ng-show="vm.loading">
+                    <paper-spinner active></paper-spinner>
+                    <div>Searching...</div>
+                </div>
+                <div>
+                    <header>
+                        <h1>Results [{{vm.Repos.length}}]</h1>
+                    </header>
+                    <div>
+                        Sort!
+                    </div>
                     <ul>
                         <li ng-repeat="result in vm.Repos">
-                            {{result.name}}
+                            <section>
+                                <header>
+                                    <h1>
+                                    <a href="{{result.data.html_url}}">
+                                    {{result.data.full_name}}
+                                    </a>
+                                    </h1>
+                                    <p>{{result.data.description}}</p>
+                                </header>
+                                <div>
+                                    Last Updated:{{result.data.updated_at}}
+                                </div>
+                                <div>
+                                    Language:{{result.data.language}}
+                                </div>
+                                <div>
+                                    Owner?
+                                    <div>
+                                        <figure>
+                                            <img ng-src="{{result.data.owner.avatar_url}}" class="avatar" width="20" height="20" />
+                                        </figure>
+                                        {{result.data.owner.login}}
+                                    </div>
+
+
+                                </div>
+<!-- <div>
+    <small>{{result}}</small>
+</div>
+ -->
+
+                            </section>
+
                         </li>
                     </ul>
-                </header>
-            </div>
+
+                </div>
         </header>
     </section>
     <section>
