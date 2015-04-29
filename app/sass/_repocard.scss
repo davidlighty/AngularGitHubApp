@@ -1,0 +1,33 @@
+/* Repo-Card */
+
+@import 'basicMixins';
+.repo-card {
+    margin: 3em auto;
+    padding: 5px;
+    background-color: #eee;
+    > header {
+        > section {
+            float: left;
+            width: 50%;
+            .repo-title {
+                color: $black;
+                font-size: 140%;
+                margin: 0;
+            }
+        }
+        @extend .clearfix;
+    }
+    .repo-owner-info {
+        font-style: italic;
+        font-size: 90%;
+        * {
+            float: left;
+        }
+        figure {
+            img {
+                width: 10%;
+            }
+        }
+    }
+    @extend .clearfix;
+}

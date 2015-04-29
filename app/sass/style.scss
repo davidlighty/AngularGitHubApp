@@ -1,0 +1,33 @@
+/* Main Scss file */
+
+$black: #000;
+$white:#fff;
+$blue:#03A9F4;
+
+@import 'ngsetup';
+
+a{
+	text-decoration: none;
+	color:$black;
+}
+
+.undecorated-link:hover {
+	text-decoration: none;
+}
+
+core-header-panel {
+  background: white;
+}
+core-toolbar {
+  background-color:$blue;
+  color:$white;
+  font-weight: bold;
+}
+
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+@import 'repocard';

@@ -1,42 +1,38 @@
 <section class="container" ng-controller="HomeController as vm">
-    <section>
-        <header>
-            <h1>GitHub Search</h1>
+    <header class="search-bar">
+        <div>
+            <paper-input-decorator label="GitHub Repo Search">
+                <input is="core-input" ng-model="repoSearchTerm" ng-change="findRepos()">
+            </paper-input-decorator>
+        </div>
+    </header>
+    <section class="search-results">
+        <div ng-show="vm.loading">
+            <paper-spinner active></paper-spinner>
+            <div>Searching...</div>
+        </div>
+        <div>
+            <header>
+                <h1>Results [{{vm.Repos.length}}]</h1>
+            </header>
             <div>
-                <paper-input-decorator label="GitHub Repo Search">
-                    <input is="core-input" ng-model="repoSearchTerm" ng-change="findRepos()">
-                </paper-input-decorator>
+                Sort!
             </div>
-            <div>
-                <div ng-show="vm.loading">
-                    <paper-spinner active></paper-spinner>
-                    <div>Searching...</div>
-                </div>
-                <div>
-                    <header>
-                        <h1>Results [{{vm.Repos.length}}]</h1>
-                    </header>
-                    <div>
-                        Sort!
-                    </div>
-                    <ul>
-                        <li ng-repeat="result in vm.Repos">
-                            <repo-card repo=result.data></repo-card>
-                        </li>
-                    </ul>
-
-                </div>
-        </header>
-    </section>
-    <section>
-        <header>
-            <h1>Todo</h1>
             <ul>
-                <li>Implement Search bar for Github Repos</li>
-                <li>List GitHub Repo Results</li>
-                <li>Clicking GitHub Repo will open/show repo links/data</li>
-                <li>Develop header search</li>
+                <li ng-repeat="result in vm.Repos">
+                    <repo-card repo=result.data></repo-card>
+                </li>
             </ul>
-        </header>
     </section>
+</section>
+<section>
+    <header>
+        <h1>Todo</h1>
+        <ul>
+            <li>Implement Search bar for Github Repos</li>
+            <li>List GitHub Repo Results</li>
+            <li>Clicking GitHub Repo will open/show repo links/data</li>
+            <li>Develop header search</li>
+        </ul>
+    </header>
 </section>

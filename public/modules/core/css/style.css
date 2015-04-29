@@ -1,0 +1,55 @@
+/* Main Scss file */
+/* Angular Setup styles */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+.ng-invalid.ng-dirty {
+  border-color: #FA787E; }
+
+.ng-valid.ng-dirty {
+  border-color: #78FA89; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+.undecorated-link:hover {
+  text-decoration: none; }
+
+core-header-panel {
+  background: white; }
+
+core-toolbar {
+  background-color: #03A9F4;
+  color: #fff;
+  font-weight: bold; }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+/* Repo-Card */
+.clearfix:after, .repo-card > header:after, .repo-card:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.repo-card {
+  margin: 3em auto;
+  padding: 5px;
+  background-color: #eee; }
+  .repo-card > header > section {
+    float: left;
+    width: 50%; }
+    .repo-card > header > section .repo-title {
+      color: #000;
+      font-size: 140%;
+      margin: 0; }
+  .repo-card .repo-owner-info {
+    font-style: italic;
+    font-size: 90%; }
+    .repo-card .repo-owner-info * {
+      float: left; }
+    .repo-card .repo-owner-info figure img {
+      width: 10%; }

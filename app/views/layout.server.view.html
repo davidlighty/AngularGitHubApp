@@ -35,8 +35,7 @@
     <link href="/modules/core/img/brand/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
     <!--Application CSS Files-->
-    {% for cssFile in cssFiles %}
-    <link rel="stylesheet" href="{{cssFile}}">{% endfor %}
+    <link rel="stylesheet" href="modules/core/css/style.css">
 
     <!-- Polymer WebComponents -->
     <script type="text/javascript" src="/lib/webcomponentsjs/webcomponents.js"></script>
@@ -52,7 +51,7 @@
 
 <body class="ng-cloak" fullbleed vertical layout unresolved>
 
-    <core-header-panel flex>
+    <core-header-panel flex mode="waterfall">
 
     	<!-- header content will go here -->
     	{% block header %}{% endblock %}

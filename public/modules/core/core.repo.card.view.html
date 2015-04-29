@@ -1,29 +1,28 @@
-<section class="repo-card">
-    <header>
-        <h1 class="repo-title">
-        <a href="{{repo.html_url}}" target="_github">
-        {{repo.full_name}}
-        </a>
-        </h1>
-        <p class="repo-description">{{repo.description}}</p>
-    </header>
-    <div class="repo-last-updated">
-        Last Updated:{{repo.updated_at}}
-    </div>
-    <div class="repo-lang-used">
-        Language:{{repo.language}}
-    </div>
-    <div>
-        <div class="repo-owner-info">
-            <figure>
-                <img ng-src="{{repo.owner.avatar_url}}" class="avatar" width="20" height="20" />
-            </figure>
-            {{repo.owner.login}}
+<paper-shadow>
+    <section class="repo-card">
+        <header>
+            <section>
+                <h1 class="repo-title">
+                <a href="{{repo.html_url}}" target="_github">{{repo.full_name}}</a>
+            </h1>
+                <p class="repo-description">{{repo.description}}</p>
+            </section>
+            <div class="repo-owner-info">
+                <figure>
+                    <img ng-src="{{repo.owner.avatar_url}}" class="avatar" />
+                </figure>
+                {{repo.owner.login}}
+            </div>
+        </header>
+        <div class="repo-last-updated">
+            Last Updated:{{repo.updated_at}}
         </div>
-    </div>
-    <!-- <div>
+        <div class="repo-lang-used">
+            Language:{{repo.language}}
+        </div>
+        <!-- <div>
     <small>{{repo}}</small>
 </div>
  -->
-
-</section>
+    </section>
+</paper-shadow>

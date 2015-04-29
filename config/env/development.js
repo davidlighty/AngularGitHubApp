@@ -3,6 +3,6 @@
 module.exports = {
 	db: 'mongodb://localhost/gitreview-dev',
 	app: {
-		title: 'gitReview - Development Environment'
+		title: 'GitHub Search - Development Environment'
 	}
 };
