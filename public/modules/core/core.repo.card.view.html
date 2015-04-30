@@ -4,23 +4,25 @@
         <header flex two>
             <section>
                 <h1 class="repo-title">
-                    <a href="{{repo.html_url}}" target="_github">{{repo.full_name}}</a>
+                    <a href="{{repo.html_url}}" target="_github"><small>{{repo.owner.login}}/</small><span>{{repo.name}}</span></a>
                 </h1>
                 <p class="repo-description">{{repo.description}}</p>
             </section>
         </header>
-        <div relative flex>
-            <figure fit>
-                <img ng-src="{{repo.owner.avatar_url}}" class="avatar" />
-            </figure>
-        </div>
-        <section class="repo-owner-info" flex>
-            <div vertical layout>
+        <section class="repo-owner-info" horizontal layout flex>
+            <div relative flex class="owner-avatar">
+                <figure fit>
+                    <img ng-src="{{repo.owner.avatar_url}}" class="avatar" />
+                </figure>
+            </div>
+            <div vertical layout class="owner-data">
                 <div>
-                    <span>{{repo.owner.login}}</span>
+                    <div>
+                        <span>{{repo.owner.login}}</span>
+                    </div>
+                    <div class="repo-last-updated">Last Updated:{{repo.updated_at | date : medium}}</div>
+                    <div ng-if="repo.language.length>0" class="repo-lang-used">{{repo.language}}</div>
                 </div>
-                <div class="repo-last-updated">Last Updated:{{repo.updated_at | date : medium}}</div>
-                <div ng-if="repo.language.length>0" class="repo-lang-used {{repo.language}}-bg">Language:{{repo.language}}</div>
             </div>
         </section>
         <!-- <div>

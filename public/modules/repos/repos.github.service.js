@@ -35,10 +35,10 @@
             @name findRepo
             @desc Search GitHub for valid Repos by the search term.
         */
-        service.findRepo = function(searchTerm) {
+        service.findRepo = function(searchTerm,currentPage) {
             if(canceller) canceller.resolve();
             canceller = $q.defer();
-            return $http.get(service.gitHubAPI.searchEndPoint('repositories', searchTerm));
+            return $http.get(service.gitHubAPI.searchEndPoint('repositories', searchTerm)+'&page='+currentPage);
         };
 
         /**

@@ -548,23 +548,27 @@ ul {
 .repo-card {
   margin: 8px auto;
   background-color: #eee; }
-  .repo-card > lang {
+  .repo-card > .lang {
     width: 2px;
     padding: 1px;
-    height: 100%; }
-  .repo-card > header > section {
-    float: left;
-    width: 79%; }
-    .repo-card > header > section .repo-title {
-      color: #000;
-      font-size: 140%;
-      margin: 0; }
-      .repo-card > header > section .repo-title:hover {
-        text-decoration: underline; }
+    border-radius: 0 2px 2px 0; }
+  .repo-card > header {
+    border-radius: 2px 0 0 2px; }
+    .repo-card > header > section {
+      float: left;
+      width: 79%; }
+      .repo-card > header > section .repo-title {
+        color: #000;
+        font-size: 140%;
+        margin: 0; }
+        .repo-card > header > section .repo-title:hover span {
+          text-decoration: underline; }
   .repo-card .repo-owner-info {
-    background: #ddd;
     font-style: italic;
     font-size: 90%; }
+  .repo-card figure {
+    margin: 0; }
   .repo-card img.avatar {
+    margin: 0;
     max-width: 100%;
     max-height: 100%; }
