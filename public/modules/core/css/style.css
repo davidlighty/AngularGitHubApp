@@ -9,6 +9,12 @@
 .ng-valid.ng-dirty {
   border-color: #78FA89; }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #E5E5E5;
+  font-family: 'RobotoDraft', sans-serif; }
+
 a {
   text-decoration: none;
   color: #000; }
@@ -29,27 +35,536 @@ ul {
   padding: 0;
   margin: 0; }
 
+.Mercury-bg {
+  background: #abcdef; }
+
+.TypeScript-bg {
+  background: #31859c; }
+
+.PureBasic-bg {
+  background: #5a6986; }
+
+.Objective-C-bg {
+  background: #4886FC; }
+
+.Self-bg {
+  background: #0579aa; }
+
+.edn-bg {
+  background: #db5855; }
+
+.NewLisp-bg {
+  background: #eedd66; }
+
+.Rebol-bg {
+  background: #358a5b; }
+
+.Frege-bg {
+  background: #00cafe; }
+
+.Dart-bg {
+  background: #98BAD6; }
+
+.AspectJ-bg {
+  background: #1957b0; }
+
+.Shell-bg {
+  background: #89e051; }
+
+.WebOntologyLanguage-bg {
+  background: #3994bc; }
+
+.xBase-bg {
+  background: #3a4040; }
+
+.Eiffel-bg {
+  background: #946d57; }
+
+.Nix-bg {
+  background: #7070ff; }
+
+.SuperCollider-bg {
+  background: #46390b; }
+
+.MTML-bg {
+  background: #0095d9; }
+
+.Racket-bg {
+  background: #ae17ff; }
+
+.Elixir-bg {
+  background: #6e4a7e; }
+
+.SAS-bg {
+  background: #1E90FF; }
+
+.Agda-bg {
+  background: #467C91; }
+
+.D-bg {
+  background: #fcd46d; }
+
+.Opal-bg {
+  background: #f7ede0; }
+
+.StandardML-bg {
+  background: #dc566d; }
+
+.Objective-C-bg {
+  background: #438eff; }
+
+.ColdFusionCFC-bg {
+  background: #ed2cd6; }
+
+.Oz-bg {
+  background: #fcaf3e; }
+
+.Mirah-bg {
+  background: #c7a938; }
+
+.Objective-J-bg {
+  background: #ff0c5a; }
+
+.Gosu-bg {
+  background: #82937f; }
+
+.Ruby-bg {
+  background: #701516; }
+
+.ComponentPascal-bg {
+  background: #b0ce4e; }
+
+.Arc-bg {
+  background: #ca2afe; }
+
+.SystemVerilog-bg {
+  background: #343761; }
+
+.APL-bg {
+  background: #8a0707; }
+
+.Go-bg {
+  background: #375eab; }
+
+.VisualBasic-bg {
+  background: #945db7; }
+
+.PHP-bg {
+  background: #4F5D95; }
+
+.Cirru-bg {
+  background: #aaaaff; }
+
+.SQF-bg {
+  background: #FFCB1F; }
+
+.Glyph-bg {
+  background: #e4cc98; }
+
+.Java-bg {
+  background: #b07219; }
+
+.Scala-bg {
+  background: #7dd3b0; }
+
+.ColdFusion-bg {
+  background: #ed2cd6; }
+
+.Perl-bg {
+  background: #0298c3; }
+
+.Elm-bg {
+  background: #60B5CC; }
+
+.Lua-bg {
+  background: #fa1fa1; }
+
+.Verilog-bg {
+  background: #848bf3; }
+
+.Factor-bg {
+  background: #636746; }
+
+.Haxe-bg {
+  background: #f7941e; }
+
+.Pure Data-bg {
+  background: #91de79; }
+
+.Forth-bg {
+  background: #341708; }
+
+.Red-bg {
+  background: #ee0000; }
+
+.Hy-bg {
+  background: #7891b1; }
+
+.Volt-bg {
+  background: #0098db; }
+
+.LSL-bg {
+  background: #3d9970; }
+
+.CoffeeScript-bg {
+  background: #244776; }
+
+.HTML-bg {
+  background: #e44b23; }
+
+.UnrealScript-bg {
+  background: #a54c4d; }
+
+.Swift-bg {
+  background: #ffac45; }
+
+.C-bg {
+  background: #555; }
+
+.AutoHotkey-bg {
+  background: #6594b9; }
+
+.Isabelle-bg {
+  background: #fdcd00; }
+
+.Boo-bg {
+  background: #d4bec1; }
+
+.AutoIt-bg {
+  background: #36699B; }
+
+.Clojure-bg {
+  background: #db5855; }
+
+.Rust-bg {
+  background: #dea584; }
+
+.Prolog-bg {
+  background: #74283c; }
+
+.SourcePawn-bg {
+  background: #f69e1d; }
+
+.ANTLR-bg {
+  background: #9DC3FF; }
+
+.Harbour-bg {
+  background: #0e60e3; }
+
+.Tcl-bg {
+  background: #e4cc98; }
+
+.BlitzMax-bg {
+  background: #cd6400; }
+
+.PigLatin-bg {
+  background: #fcd7de; }
+
+.Lasso-bg {
+  background: #2584c3; }
+
+.ECL-bg {
+  background: #8a1267; }
+
+.VHDL-bg {
+  background: #543978; }
+
+.Arduino-bg {
+  background: #bd79d1; }
+
+.PropellerSpin-bg {
+  background: #2b446d; }
+
+.IDL-bg {
+  background: #e3592c; }
+
+.ATS-bg {
+  background: #1ac620; }
+
+.Ada-bg {
+  background: #02f88c; }
+
+.Nu-bg {
+  background: #c9df40; }
+
+.LFE-bg {
+  background: #004200; }
+
+.RAML-bg {
+  background: #77d9fb; }
+
+.Oxygene-bg {
+  background: #5a63a3; }
+
+.ASP-bg {
+  background: #6a40fd; }
+
+.Assembly-bg {
+  background: #6E4C13; }
+
+.Gnuplot-bg {
+  background: #f0a9f0; }
+
+.Turing-bg {
+  background: #45f715; }
+
+.Vala-bg {
+  background: #ee7d06; }
+
+.Processing-bg {
+  background: #2779ab; }
+
+.FLUX-bg {
+  background: #33CCFF; }
+
+.NetLogo-bg {
+  background: #ff2b2b; }
+
+.CSharp-bg {
+  background: #178600; }
+
+.CSS-bg {
+  background: #563d7c; }
+
+.LiveScript-bg {
+  background: #499886; }
+
+.QML-bg {
+  background: #44a51c; }
+
+.Pike-bg {
+  background: #066ab2; }
+
+.LOLCODE-bg {
+  background: #cc9900; }
+
+.ooc-bg {
+  background: #b0b77e; }
+
+.Mask-bg {
+  background: #f97732; }
+
+.EmberScript-bg {
+  background: #f64e3e; }
+
+.TeX-bg {
+  background: #3D6117; }
+
+.Nemerle-bg {
+  background: #0d3c6e; }
+
+.KRL-bg {
+  background: #f5c800; }
+
+.UnifiedParallelC-bg {
+  background: #755223; }
+
+.Golo-bg {
+  background: #f6a51f; }
+
+.Perl6-bg {
+  background: #0298c3; }
+
+.Fancy-bg {
+  background: #7b9db4; }
+
+.OCaml-bg {
+  background: #3be133; }
+
+.wisp-bg {
+  background: #7582D1; }
+
+.Pascal-bg {
+  background: #b0ce4e; }
+
+.F#-bg {
+  background: #b845fc; }
+
+.Puppet-bg {
+  background: #cc5555; }
+
+.ActionScript-bg {
+  background: #e3491a; }
+
+.RagelinRubyHost-bg {
+  background: #ff9c2e; }
+
+.Fantom-bg {
+  background: #dbded5; }
+
+.Zephir-bg {
+  background: #118f9e; }
+
+.Smalltalk-bg {
+  background: #596706; }
+
+.DM-bg {
+  background: #075ff1; }
+
+.Ioke-bg {
+  background: #078193; }
+
+.PogoScript-bg {
+  background: #d80074; }
+
+.EmacsLisp-bg {
+  background: #c065db; }
+
+.JavaScript-bg {
+  background: #f1e05a; }
+
+.VimL-bg {
+  background: #199c4b; }
+
+.Matlab-bg {
+  background: #bb92ac; }
+
+.Slash-bg {
+  background: #007eff; }
+
+.R-bg {
+  background: #198ce7; }
+
+.Erlang-bg {
+  background: #0faf8d; }
+
+.Pan-bg {
+  background: #cc0000; }
+
+.LookML-bg {
+  background: #652B81; }
+
+.Eagle-bg {
+  background: #3994bc; }
+
+.Scheme-bg {
+  background: #1e4aec; }
+
+.PAWN-bg {
+  background: #dbb284; }
+
+.Python-bg {
+  background: #3581ba; }
+
+.Max-bg {
+  background: #ce279c; }
+
+.CommonLisp-bg {
+  background: #3fb68b; }
+
+.Latte-bg {
+  background: #A8FF97; }
+
+.XQuery-bg {
+  background: #2700e2; }
+
+.Omgrofl-bg {
+  background: #cabbff; }
+
+.Nimrod-bg {
+  background: #37775b; }
+
+.Nit-bg {
+  background: #0d8921; }
+
+.Chapel-bg {
+  background: #8dc63f; }
+
+.Groovy-bg {
+  background: #e69f56; }
+
+.Dylan-bg {
+  background: #3ebc27; }
+
+.E-bg {
+  background: #ccce35; }
+
+.Parrot-bg {
+  background: #f3ca0a; }
+
+.GrammaticalFramework-bg {
+  background: #ff0000; }
+
+.GameMakerLanguage-bg {
+  background: #8ad353; }
+
+.VCL-bg {
+  background: #0298c3; }
+
+.Papyrus-bg {
+  background: #6600cc; }
+
+.FORTRAN-bg {
+  background: #4d41b1; }
+
+.Clean-bg {
+  background: #3a81ad; }
+
+.Alloy-bg {
+  background: #cc5c24; }
+
+.AGSScript-bg {
+  background: #B9D9FF; }
+
+.Slim-bg {
+  background: #ff8877; }
+
+.PureScript-bg {
+  background: #bcdc53; }
+
+.Julia-bg {
+  background: #a270ba; }
+
+.Haskell-bg {
+  background: #29b544; }
+
+.Io-bg {
+  background: #a9188d; }
+
+.Rouge-bg {
+  background: #cc0088; }
+
+.cpp-bg {
+  background: #f34b7d; }
+
+.Shen-bg {
+  background: #120F14; }
+
+.Dogescript-bg {
+  background: #cca760; }
+
+.nesC-bg {
+  background: #ffce3b; }
+
 /* Repo-Card */
 .clearfix:after, .repo-card > header:after, .repo-card:after {
   content: "";
   display: table;
   clear: both; }
 
+.padding-8, .repo-card > header > section {
+  padding: 8px; }
+
 .repo-card {
-  margin: 3em auto;
-  padding: 5px;
+  margin: 8px auto;
   background-color: #eee; }
+  .repo-card > lang {
+    width: 2px;
+    padding: 1px;
+    height: 100%; }
   .repo-card > header > section {
     float: left;
-    width: 50%; }
+    width: 79%; }
     .repo-card > header > section .repo-title {
       color: #000;
       font-size: 140%;
       margin: 0; }
+      .repo-card > header > section .repo-title:hover {
+        text-decoration: underline; }
   .repo-card .repo-owner-info {
+    background: #ddd;
     font-style: italic;
     font-size: 90%; }
-    .repo-card .repo-owner-info * {
-      float: left; }
-    .repo-card .repo-owner-info figure img {
-      width: 10%; }
+  .repo-card img.avatar {
+    max-width: 100%;
+    max-height: 100%; }

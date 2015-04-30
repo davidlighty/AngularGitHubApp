@@ -14,7 +14,7 @@ module.exports = {
         lib: {
             css: [],
             imports: [
-                'public/font-roboto/roboto.html',
+                'public/lib/font-roboto/roboto.html',
                 'public/lib/core-elements/core-elements.html',
                 'public/lib/paper-elements/paper-elements.html'
             ],

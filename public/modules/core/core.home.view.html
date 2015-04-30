@@ -12,27 +12,11 @@
             <div>Searching...</div>
         </div>
         <div>
-            <header>
-                <h1>Results [{{vm.Repos.length}}]</h1>
-            </header>
-            <div>
-                Sort!
-            </div>
             <ul>
                 <li ng-repeat="result in vm.Repos">
                     <repo-card repo=result.data></repo-card>
                 </li>
             </ul>
+        </div>
     </section>
-</section>
-<section>
-    <header>
-        <h1>Todo</h1>
-        <ul>
-            <li>Implement Search bar for Github Repos</li>
-            <li>List GitHub Repo Results</li>
-            <li>Clicking GitHub Repo will open/show repo links/data</li>
-            <li>Develop header search</li>
-        </ul>
-    </header>
 </section>

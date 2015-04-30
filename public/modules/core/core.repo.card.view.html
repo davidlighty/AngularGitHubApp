@@ -1,25 +1,28 @@
 <paper-shadow>
-    <section class="repo-card">
-        <header>
+    <section class="repo-card" horizontal layout>
+        <div class="lang {{repo.language}}-bg"></div>
+        <header flex two>
             <section>
                 <h1 class="repo-title">
-                <a href="{{repo.html_url}}" target="_github">{{repo.full_name}}</a>
-            </h1>
+                    <a href="{{repo.html_url}}" target="_github">{{repo.full_name}}</a>
+                </h1>
                 <p class="repo-description">{{repo.description}}</p>
             </section>
-            <div class="repo-owner-info">
-                <figure>
-                    <img ng-src="{{repo.owner.avatar_url}}" class="avatar" />
-                </figure>
-                {{repo.owner.login}}
-            </div>
         </header>
-        <div class="repo-last-updated">
-            Last Updated:{{repo.updated_at}}
+        <div relative flex>
+            <figure fit>
+                <img ng-src="{{repo.owner.avatar_url}}" class="avatar" />
+            </figure>
         </div>
-        <div class="repo-lang-used">
-            Language:{{repo.language}}
-        </div>
+        <section class="repo-owner-info" flex>
+            <div vertical layout>
+                <div>
+                    <span>{{repo.owner.login}}</span>
+                </div>
+                <div class="repo-last-updated">Last Updated:{{repo.updated_at | date : medium}}</div>
+                <div ng-if="repo.language.length>0" class="repo-lang-used {{repo.language}}-bg">Language:{{repo.language}}</div>
+            </div>
+        </section>
         <!-- <div>
     <small>{{repo}}</small>
 </div>
