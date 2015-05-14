@@ -26,7 +26,6 @@
 
 
         function searchRepos() {
-            $log.debug('search?', $scope.repoSearchTerm);
             ReposManager.Abort();
             if ($scope.repoSearchTerm.length > 3) {
                 ReposManager.GetRepos($scope.repoSearchTerm);
