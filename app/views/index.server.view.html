@@ -1,11 +1,11 @@
 {% extends 'layout.server.view.html' %} {% block header%}
-<core-toolbar id="mainheader">
+<core-toolbar id="mainheader" ng-controller="HeaderController">
     <span flex>{{title}}</span>
     <section class="search-bar">
-    	
+        <div>
+            <input is="core-input" ng-model="repoSearchTerm" ng-change="SearchRepos()">
+        </div>
     </section>
     <paper-icon-button id="searchbutton" icon="search"></paper-icon-button>
-</core-toolbar>
-{% endblock %} {% block content %}
-<div ng-include="'/modules/core/core.home.view.html'"></div>
-{% endblock %}
+</core-toolbar>{% endblock %} {% block content %}
+<div ng-include="'/modules/core/core.home.view.html'"></div>{% endblock %}

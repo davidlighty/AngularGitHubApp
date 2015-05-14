@@ -1,23 +1,40 @@
 /*global angular */
 
-(function() {
+(function () {
     'use strict';
+
+    angular.module('core')
+        .controller('HeaderController', HeaderController);
+
+    HeaderController.$inject = ['$scope','$log', 'ReposManager'];
+
 
     /**
      * @name HeaderController
      * @desc Controller for the site fixed top header
      */
-    function HeaderController($scope) {
+    function HeaderController($scope,$log, ReposManager) {
+       
         $scope.isCollapsed = false;
 
-        $scope.toggleCollapsibleMenu = function() {
+        $scope.toggleCollapsibleMenu = function () {
             $scope.isCollapsed = !$scope.isCollapsed;
         };
+
+        $scope.SearchRepos = searchRepos;
+
+
+
+        function searchRepos() {
+            $log.debug('search?', $scope.repoSearchTerm);
+            ReposManager.Abort();
+            if ($scope.repoSearchTerm.length > 3) {
+                ReposManager.GetRepos($scope.repoSearchTerm);
+            }
+        }
+
     }
 
-    HeaderController.$inject = ['$scope'];
 
-    angular.module('core')
-        .controller('HeaderController', HeaderController);
 
 })();

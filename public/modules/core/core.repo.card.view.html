@@ -20,8 +20,16 @@
                     <div>
                         <span>{{repo.owner.login}}</span>
                     </div>
-                    <div class="repo-last-updated">Last Updated:{{repo.updated_at | date : medium}}</div>
+                    <div class="repo-last-updated">Last Updated:
+                        <div ng-if="repo.lastupdate_diff>24">{{repo.updated_at | date : medium}}</div>
+                        <div ng-if="repo.lastupdate_diff<=24">{{repo.lastupdate_diff | date : h }} hours ago</div>
+                    </div>
                     <div ng-if="repo.language.length>0" class="repo-lang-used">{{repo.language}}</div>
+                    <div class="repo-stats">
+                        <div ng-if="repo.data.stargazers_count>0">{{repo.stargazers_count}}</div>
+                        <div ng-if="repo.data.forks_count>1">{{repo.forks_count}}</div>
+                        <div ng-if="repo.data.open_issues_count>1">{{repo.open_issues_count}}</div>
+                    </div>
                 </div>
             </div>
         </section>

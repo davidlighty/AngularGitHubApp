@@ -13,31 +13,29 @@
      *  @desc Home Controller for gitReview site
      */
     function HomeController($scope, $element, $log, $timeout, ReposManager) {
-        var vm = this,
-            timeout, timeoutDelay = 350;
+        var vm = this;
 
-        $scope.SearchRepos = searchRepos;
         vm.Repos = ReposManager.Repos;
 
-        $element.find('.search-results').bind('scroll', function () {
-            $log.debug('Scroll Event'); //works!
-        });
+//        $element.find('.search-results').bind('scroll', function () {
+//            $log.debug('Scroll Event'); //works!
+//        });
 
             var coreHeaderPanel = document.querySelector("core-header-panel");
             coreHeaderPanel.addEventListener("scroll", function (event) {
-                $log.debug('Scroll Event', event); //works!
-                ReposManager.GetMoreResults();
+                $log.debug('window', window.pageXOffset, window.pageYOffset, window, coreHeaderPanel);
+                $log.debug('Offsets', window.pageYOffset, vm.scrollY);
+                if(!vm.scrollY || vm.scrollY < window.pageYOffset){
+                    vm.scrollY = window.pageYOffset; // save.
+                    ReposManager.GetMoreResults();    
+                }
+                
             });
 
         //////////////////////////////////////////////////////////////
 
 
-        function searchRepos() {
-             ReposManager.Abort();
-            if ($scope.repoSearchTerm.length > 3) {
-                ReposManager.GetRepos($scope.repoSearchTerm);
-            }
-        }
+
     }
 
 

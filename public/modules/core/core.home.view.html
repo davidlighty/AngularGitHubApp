@@ -1,11 +1,4 @@
 <section class="container" ng-controller="HomeController as vm">
-    <header class="search-bar">
-        <div>
-            <paper-input-decorator label="GitHub Repo Search">
-                <input is="core-input" ng-model="repoSearchTerm" ng-change="SearchRepos()">
-            </paper-input-decorator>
-        </div>
-    </header>
     <section class="search-results">
         <div ng-show="vm.loading">
             <paper-spinner active></paper-spinner>

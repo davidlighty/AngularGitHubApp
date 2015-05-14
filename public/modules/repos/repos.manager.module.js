@@ -19,13 +19,7 @@
         @desc Handles getting repos and creating our client side models of repos.
     */
     function ReposManager($log, $timeout, GitHubService, RepoModel) {
-        var mngr,
-            timeout,
-            timeoutDelay = 352,
-            maxPages = 0,
-            currentPage = 1,
-            resultsPerPage = 30,
-            scrollEvents = 0;
+        var mngr, config = getConfig();
 
         $log.debug('ReposManager Init');
 
@@ -46,30 +40,30 @@
          * @desc Keep track of # of events and ask for more results, if appicable.
          */
         function getMoreResults() {
-            scrollEvents++;
-            if (currentPage >= maxPages) return;
-            $log.debug('GetMore?', scrollEvents, resultsPerPage * currentPage, maxPages);
-            if ((scrollEvents) >= ((resultsPerPage * currentPage) / 2)) {
+            config.scrollEvents++;
+            if (config.currentPage >= config.maxPages) return;
+            $log.debug('GetMore?', config.scrollEvents, config.resultsPerPage * config.currentPage, config.maxPages);
+            if ((config.scrollEvents) >= ((config.resultsPerPage * config.currentPage) / 2)) {
                 // get more.
-                currentPage++;
+                config.currentPage++;
                 findRepos(mngr.CurrentSearchTerm);
             }
         }
 
         function findRepos(searchTerm) {
-            if (timeout) $timeout.cancel(timeout);
+            if (config.timeout) $timeout.cancel(config.timeout);
             if (searchTerm.length > 3) {
-                timeout = $timeout(function () {
+                config.timeout = $timeout(function () {
                     $log.debug('Searching: ', searchTerm);
                     mngr.CurrentSearchTerm = searchTerm;
-                    return GitHubService.findRepo(mngr.CurrentSearchTerm, currentPage).then(function (resp) {
-                        maxPages = Math.floor(resp.data.total_count / resultsPerPage);
-                        $log.debug('Response', resp, resp.data.total_count, maxPages);
+                    return GitHubService.findRepo(mngr.CurrentSearchTerm, config.currentPage).then(function (resp) {
+                        config.maxPages = Math.floor(resp.data.total_count / config.resultsPerPage);
+                        $log.debug('Response', resp, resp.data.total_count, config.maxPages);
                         angular.forEach(resp.data.items, function (repo) {
                             mngr.Repos.push(new RepoModel(repo));
                         });
                     });
-                }, timeoutDelay);
+                }, config.timeoutDelay);
             }
         }
 
@@ -78,8 +72,20 @@
             @desc Clear out data array for a new search, cancel any current search.
         */
         function abort() {
+            if (config.timeout) $timeout.cancel(config.timeout);
             mngr.Repos.length = 0;
-            if (timeout) $timeout.cancel(timeout);
+            config=getConfig();
+        }
+
+        function getConfig() {
+            return {
+                timeout: null,
+                timeoutDelay: 352,
+                maxPages: 0,
+                currentPage: 1,
+                resultsPerPage: 30,
+                scrollEvents: 0
+            };
         }
 
     }
